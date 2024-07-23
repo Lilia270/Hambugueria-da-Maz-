@@ -1,0 +1,162 @@
+.header {
+    background: #fff;
+    color: #8B0000;
+    padding: 20px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Define a animação de balanço */
+@keyframes bounce {
+    0%, 100% {
+        transform: rotate(-1deg);
+    }
+    50% {
+        transform: rotate(1deg);
+    }
+}
+
+.header h1 {
+    font-size: 24px;
+    animation: bounce 1s infinite; /* Aplica a animação */
+}
+
+/* Estilo para o menu padrão */
+.header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header nav ul li {
+    margin: 0 15px;
+}
+
+.header nav ul li a {
+    color: #8B0000;
+    text-decoration: none;
+    padding: 10px 15px; /* Adiciona algum padding para facilitar o clique */
+    border-radius: 25px; /* Bordas arredondadas */
+}
+
+.header nav ul li a:hover,
+.header nav ul li a:focus {
+    color: #fff; /* Cor do texto */
+    background-color: #8B0000; /* Cor do fundo (vermelho vinho) */
+    border: 2px solid #fff; /* Borda branca */
+    transform: scale(1.05); /* Aumenta o tamanho do item */
+}
+
+/* Estilo para o ícone do menu */
+.menu-icon {
+    font-size: 24px;
+    color: #8B0000;
+    cursor: pointer;
+    display: none; /* Esconda o ícone de menu por padrão */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .header nav {
+        display: none; /* Esconda o menu por padrão em telas pequenas */
+        position: fixed;
+        top: 0;
+        right: -50%; /* Ajuste para 50% para que o menu inicie fora da tela no lado direito */
+        width: 50%; /* Ajuste para 50% para aumentar o tamanho do menu */
+        height: 100%;
+        background-color: #8B0000; /* Fundo vermelho */
+        transition: right 0.3s ease; /* Transição para o efeito de slide */
+        padding: 20px;
+        box-sizing: border-box;
+        z-index: 9;
+    }
+
+    .header nav.open {
+        display: flex;
+        right: 0; /* Mostre o menu quando aberto, alinhado à direita */
+    }
+
+    .header nav ul {
+        flex-direction: column; /* Coloque os itens em coluna em telas pequenas */
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 0; /* Remova margens adicionais */
+    }
+
+    .header nav ul li {
+        margin: 10px 0; /* Diminua a margem entre os itens do menu */
+    }
+
+    .header nav ul li a {
+        color: #fff; /* Texto branco */
+        font-size: 18px; /* Diminua o tamanho do texto */
+        border-radius: 10px; /* Bordas arredondadas nos links */
+        padding: 10px 20px; /* Ajuste o padding */
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Adicione transição suave para hover e clique */
+        display: inline-block; /* Garanta que o padding seja aplicado corretamente */
+    }
+
+    .header nav ul li a:hover,
+    .header nav ul li a:focus {
+        color: #8B0000; /* Texto vermelho */
+        background-color: #fff; /* Fundo branco */
+        border: 2px solid #8B0000; /* Borda vermelha */
+        transform: scale(1.05); /* Efeito de clique */
+    }
+
+    .menu-icon {
+        display: block; /* Mostre o ícone de menu em telas pequenas */
+        font-size: 36px; /* Aumente o tamanho do ícone do menu */
+        cursor: pointer; /* Adicione o cursor pointer */
+        transition: transform 0.2s ease; /* Adicione transição para o efeito de clique */
+    }
+
+    .menu-icon:hover,
+    .menu-icon:focus {
+        transform: scale(1.1); /* Efeito de clique no ícone de menu */
+    }
+
+    .menu-icon.close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #fff; /* Cor do ícone de fechar */
+        font-size: 36px; /* Aumente o tamanho do ícone de fechar */
+        padding: 10px; /* Padding para aumentar a área clicável */
+        cursor: pointer; /* Adicione o cursor pointer */
+        /* Sem bordas arredondadas no ícone de fechar */
+    }
+}
+
+/* Exibir o menu e ocultar o ícone de menu em telas grandes */
+@media (min-width: 769px) {
+    .header nav {
+        display: flex; /* Exiba o menu normalmente */
+        position: static; /* Remova a posição fixa para telas grandes */
+        width: auto; /* Ajuste a largura para o conteúdo */
+        height: auto; /* Ajuste a altura para o conteúdo */
+        background-color: transparent; /* Remova o fundo vermelho */
+        padding: 0; /* Remova o padding extra */
+    }
+
+    .menu-icon {
+        display: none; /* Oculte o ícone do menu em telas grandes */
+    }
+}

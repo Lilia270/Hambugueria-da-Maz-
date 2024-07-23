@@ -1,0 +1,107 @@
+.contact {
+    padding: 30px 20px;
+    background-color: #8B0000;
+  }
+  
+  .contact .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .contact form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact .form-group {
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .contact .form-group label {
+    margin-bottom: 5px;
+    color: #fff;
+  }
+  
+  .contact .form-group input,
+  .contact .form-group textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .contact .form-group textarea {
+    height: 120px; /* Aumenta a altura do textarea */
+    resize: vertical; /* Permite que o usuário ajuste a altura, mas não a largura */
+  }
+  
+  .contact .payment-options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .contact .payment-options label {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .contact .payment-options input {
+    margin-right: 10px;
+  }
+  
+  .contact button {
+    padding: 10px 20px;
+    border: none;
+    background: #fff;
+    color: #8B0000;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .contact button:hover {
+    transform: scale(1.1);
+  }
+  
+  .contact .contact-info {
+    margin-top: 20px;
+  }
+  
+  .contact .contact-info p {
+    font-size: 17px;
+    color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .contact .form-group {
+        max-width: 90%; /* Reduz a largura máxima para telas menores */
+    }
+
+    .contact .payment-options {
+        max-width: 90%; /* Reduz a largura máxima das opções de pagamento */
+    }
+
+
+    .contact h2 {
+        font-size: 24px; /* Ajusta o tamanho da fonte do título no modo responsivo */
+    }
+}

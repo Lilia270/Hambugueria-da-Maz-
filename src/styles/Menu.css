@@ -1,0 +1,145 @@
+.menu {
+    padding: 60px 20px;
+    background-color: #8B0000;
+}
+
+.menu .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.menu h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.menu-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.menu-items {
+    display: flex;
+    transition: transform 0.3s ease;
+    
+}
+
+.menu-item {
+    flex: 0 0 auto;
+    width: 300px; /* Ajuste conforme necessário */
+    margin: 0 10px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para transformações e sombra */
+}
+
+.menu-item:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho do item do menu */
+    box-shadow: 0 0 15px rgba(139, 0, 0, 0.7); /* Adiciona uma sombra vermelha ao redor do item */
+    border-color: #ce3a3aa7; /* Altera a cor da borda para vermelho */
+}
+
+.menu-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #8B0000;
+}
+
+.menu-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Estilos para os botões de navegação */
+.carousel-button {
+    background: #fff;
+    border: none;
+    color: #8B0000;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    transition: 0.3s, color 0.3s;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+    .menu {
+        padding: 60px 20px;
+        background-color: #8B0000;
+    }
+
+    .menu .container {
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .menu-carousel {
+        display: block; /* Faz com que o carrossel ocupe o espaço disponível e não tenha rotação horizontal */
+    }
+
+    .menu-items {
+        display: flex;
+        flex-direction: column; /* Alinha os itens em coluna */
+        overflow-y: auto; /* Permite rolagem vertical */
+        max-height: 500px; /* Define uma altura máxima para o carrossel */
+        scroll-snap-type: y mandatory; /* Garante que a rolagem seja alinhada aos itens */
+        padding: 0;
+    }
+
+    .menu-item {
+        flex: 0 0 auto;
+        width: 100%; /* Faz com que os itens ocupem toda a largura disponível */
+        margin: 10px 0; /* Adiciona margem vertical entre os itens */
+        padding: 20px;
+        background: #fff;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para transformações e sombra */
+        scroll-snap-align: center; /* Alinha o item ao centro da tela quando rolar */
+    }
+
+    .menu-item:hover {
+        transform: scale(1.05); /* Aumenta ligeiramente o tamanho do item do menu */
+        box-shadow: 0 0 15px rgba(139, 0, 0, 0.7); /* Adiciona uma sombra vermelha ao redor do item */
+        border-color: #ce3a3aa7; /* Altera a cor da borda para vermelho */
+    }
+
+    .menu-item h3 {
+        font-size: 20px; /* Ajusta o tamanho da fonte para telas menores */
+        margin-bottom: 10px;
+        color: #8B0000;
+    }
+
+    .menu-item p {
+        font-size: 14px; /* Ajusta o tamanho do parágrafo para telas menores */
+        color: #555;
+    }
+
+    .carousel-button {
+        display: none; /* Remove os botões de navegação no modo responsivo */
+    }
+
+    .menu h2 {
+        font-size: 24px;
+    }
+}

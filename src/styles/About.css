@@ -1,0 +1,41 @@
+.about {
+    padding: 70px 20px;
+    background: #fff;
+  }
+  .about .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #8B0000;
+  }
+  .about p {
+    font-size: 18px;
+    color: #555;
+  }
+
+  
+  /* Estilos responsivos */
+@media (max-width: 768px) {
+    .about {
+        padding: 40px 10px; /* Ajusta o padding para telas menores */
+    }
+
+    .about h2 {
+        font-size: 28px; /* Reduz o tamanho da fonte do título */
+        margin-bottom: 15px; /* Ajusta a margem inferior do título */
+    }
+
+    .about p {
+        font-size: 16px; /* Reduz o tamanho da fonte do parágrafo */
+        line-height: 1.5; /* Melhora a legibilidade ajustando o espaçamento entre linhas */
+    }
+
+    .about h2 {
+        font-size: 24px;
+        
+      }
+}

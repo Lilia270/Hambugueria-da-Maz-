@@ -1,0 +1,89 @@
+.hero {
+    position: relative;
+    height: 80vh;
+    background-color: #8B0000; /* Cor de fundo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Alinha o conteúdo centralizado */
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 320px; /* Ajuste conforme necessário para manter a proporção */
+    height: auto;
+    margin-right: 0; /* Remova o espaço entre a imagem e o texto */
+}
+
+.hero-text {
+    color: #fff;
+    text-align: center; /* Alinha o texto no centro */
+    font-family: 'Poppins', sans-serif; /* Certifique-se de que a fonte está importada corretamente */
+}
+
+.hero-text h2 {
+    font-size: 55px; /* Tamanho da fonte */
+    margin: 0;
+    line-height: 1.2; /* Ajusta o espaçamento entre as linhas */
+    white-space: pre-line; /* Garante que as quebras de linha são respeitadas */
+}
+
+.btn-saber-mais {
+  
+    padding: 10px 15px; /* Espaço interno do botão */
+    background-color: #fff; /* Cor de fundo do botão */
+    color: #8B0000; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 10px; /* Cantos arredondados */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Aplica o cursor de mão ao passar sobre o botão */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para mudanças de cor */
+}
+
+.btn-saber-mais:hover {
+    
+    transform: scale(1.1); /* Aumenta o tamanho do botão ao passar o cursor */
+}
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .hero {
+        height: auto; /* Ajusta a altura do hero para caber o conteúdo em telas menores */
+        flex-direction: column; /* Alinha o conteúdo em coluna em telas menores */
+        padding: 20px; /* Adiciona padding */
+    }
+
+    .hero img {
+        max-width: 300px; /* Define um tamanho menor para a imagem em telas pequenas */
+        margin-bottom: 10px; /* Reduz o espaço entre a imagem e o texto */
+    }
+
+    .hero-text h2 {
+        font-size: 1.8rem; /* Reduz o tamanho da fonte para telas menores */
+        
+    }
+
+    .hero-text p {
+        font-size: 1rem; /* Ajusta o tamanho do parágrafo para telas menores */
+        margin: 5px 0; /* Reduz a margem entre o parágrafo e o botão */
+    }
+
+    .btn-saber-mais {
+        padding: 8px 16px; /* Ajusta o padding do botão */
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte do botão */
+    }
+}
+
+
+
+
+
+
+
+
